@@ -36,7 +36,7 @@ function App() {
           </>
         ) : (
           <div className="no-data-message-container">
-            Import contacts to get started!
+            Import contacts to get started
           </div>
         )}
       </div>
