@@ -1,0 +1,147 @@
+/* Styles for the table container */
+.table-container {
+  margin: 0px 20px 20px 20px;
+  overflow-x: auto; /* Enables horizontal scrolling if table is too wide */
+  overflow-y: auto;
+}
+
+/* Styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Collapses the border */
+  font-family: Arial, sans-serif; /* Modern font */
+}
+
+th, td {
+  text-align: left;
+  padding: 12px 15px; /* Spacing inside cells */
+  border-bottom: 1px solid #ddd; /* Light border for the cells */
+}
+
+th {
+  background-color: #246A24; /* Example green color for headers */
+  color: white; /* White text for contrast */
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+tr:hover {
+  background-color: #ddd; /* Hover effect for rows */
+}
+
+/* Style for the header to make it stick at the top */
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Button styles to match the modern SaaS look */
+.button-primary {
+  background-color: #246A24; /* Same green color as the table headers for consistency */
+  color: white; /* White text for contrast */
+  border: none; /* No border for a modern look */
+  padding: 10px 20px; /* Top/bottom and left/right padding for a larger clickable area */
+  margin: 20px; /* Margin around the button for spacing */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  cursor: pointer; /* Cursor to indicate the button is clickable */
+  font-size: 16px; /* Font size for readability */
+  font-weight: bold; /* Bold font for emphasis */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for interactions */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.button-primary:hover {
+  background-color: #367c39; /* Slightly darker shade of green for hover state */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Larger shadow for hover state */
+}
+
+.button-primary:focus {
+  outline: none; /* Removes the default focus outline */
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4), 0 0 0 4px #4CAF50; /* Custom focus style */
+}
+
+.button-primary:active {
+  background-color: #2e6531; /* Even darker shade of green for active state */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Resets the shadow to a smaller size */
+}
+
+/* New styles for the no-data message */
+.no-data-message {
+  text-align: center; /* Center the text horizontally */
+  margin-top: 50px; /* Push down from the top of the container */
+  font-size: 24px; /* Make the font larger */
+  color: #555; /* A mid-tone color for the text */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns button to the right */
+  padding: 20px; /* Padding on all sides */
+}
+
+
+/* Styles for the header */
+.app-header {
+  display: flex;
+  justify-content: space-between; /* Aligns items to the sides */
+  align-items: center; /* Centers items vertically */
+  padding-left: 40px; /* Adds padding inside the header */
+}
+
+/* Styles for the logo */
+.app-logo {
+  font-size: 40px; /* Large font size for visibility */
+  color: #333; /* Dark color for the logo text */
+  margin: 0; /* Resets default margin */
+  padding: 0; /* Resets default padding */
+}
+
+.json-output {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text color for contrast */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 4px; /* Rounded corners */
+  margin: 0 20px 20px 0; /* Margin around the container */
+}
+
+/* Style for the <pre> tag to format the JSON nicely */
+.json-output pre {
+  white-space: pre-wrap; /* Wraps the text */
+  word-wrap: break-word; /* Breaks long words */
+  margin: 0; /* Resets default margin */
+}
+
+/* Styles for the content area below the header */
+.content {
+  display: flex;
+  /* Assuming you want to split the height equally as well */
+  height: calc(100vh - 60px); /* Adjust the value based on your header's height */
+}
+
+.main-content {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust based on your header's height */
+}
+
+.table-section,
+.json-section {
+  flex: 1; /* Allows the children to grow and take up equal space */
+  flex-basis: 50%; /* Each section takes up half the width */
+  overflow-y: auto; /* Adds scrollable functionality to each section */
+  height: 100%; /* Full height to match the parent container's height */
+}
+
+/* Adjustments for when there is no data */
+.no-data-message-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%; /* Takes full width to center the message when there's no data */
+  text-align: center;
+  font-size: 24px; /* Larger font for the message */
+  color: #555; /* Mid-tone color for the text */
+}
