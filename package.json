@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && aws s3 sync build/ s3://tableflow-react-demo && AWS_PAGER=\"\" aws cloudfront create-invalidation --distribution-id E202IFSC1OZXQ5 --paths \"/*\"&& echo \"Deployment completed.\""
+    "deploy": "react-scripts build && aws s3 sync build/ s3://example-crm && AWS_PAGER=\"\" aws cloudfront create-invalidation --distribution-id E202IFSC1OZXQ5 --paths \"/*\"&& echo \"Deployment completed.\""
   },
   "eslintConfig": {
     "extends": [
